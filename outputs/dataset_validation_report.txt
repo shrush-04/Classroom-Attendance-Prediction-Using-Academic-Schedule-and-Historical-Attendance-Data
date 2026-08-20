@@ -1,0 +1,101 @@
+==================================================================
+  SYNTHETIC DATASET VALIDATION REPORT
+  Generated: 2026-08-20 14:54:30
+  File: data/student_attendance.csv
+  NOTICE: All data is SYNTHETIC. No real student records used.
+==================================================================
+
+[CHECK 1] Row and Column Count
+  Rows (records)  : 1200
+  Columns         : 20
+  Status          : PASS - >= 1000 rows
+
+[CHECK 2] Column Names
+  Expected columns : 20
+  Found columns    : 20
+  Missing columns  : None
+  Status           : PASS
+
+[CHECK 3] Missing Values
+  Total missing cells : 0
+  Status : PASS
+
+[CHECK 4] Duplicate Rows
+  Duplicate rows : 0
+  Status         : PASS
+
+[CHECK 5] Age Range (expected 17-25)
+  Min age          : 19
+  Max age          : 23
+  Out-of-range rows: 0
+  Status           : PASS
+
+[CHECK 6] Total_Classes (must be > 0)
+  Min Total_Classes : 8
+  Max Total_Classes : 12
+  Rows with <= 0    : 0
+  Status            : PASS
+
+[CHECK 7] Classes_Attended in [0, Total_Classes]
+  Rows with Classes_Attended < 0              : 0
+  Rows with Classes_Attended > Total_Classes  : 0
+  Status : PASS
+
+[CHECK 8] Attendance_Percentage in [0.0, 100.0]
+  Min   : 11.11
+  Max   : 100.0
+  Mean  : 70.89
+  Std   : 18.8
+  Rows < 0   : 0
+  Rows > 100 : 0
+  Status     : PASS
+
+[CHECK 9] Attendance_Percentage Formula Consistency
+  Formula: (Classes_Attended / Total_Classes) * 100 rounded to 2dp
+  Mismatched rows : 0
+  Status          : PASS
+
+[CHECK 10] Attendance_Status Label Rule
+  Rule: Regular if Attendance_Percentage >= 75.0, else Defaulter
+  Mismatched rows : 0
+  Status          : PASS
+
+[CHECK 11] Regular / Defaulter Distribution
+  Defaulter   : 612 rows  (51.0%)
+  Regular     : 588 rows  (49.0%)
+  Both classes present : True
+  Status               : PASS
+
+[CHECK 12] Assignment_Score in [0, 100]
+  Min   : 23.9
+  Max   : 89.7
+  Mean  : 60.2
+  Invalid rows : 0
+  Status       : PASS
+
+[CHECK 13] Internal_Marks in [0, 30]
+  Min   : 0.0
+  Max   : 29.7
+  Mean  : 12.7
+  Invalid rows : 0
+  Status       : PASS
+
+[CHECK 14] Medical_Leave_Days and Late_Count (must be >= 0)
+  Medical_Leave_Days < 0 : 0
+  Late_Count < 0         : 0
+  Status : PASS
+
+[CHECK 15] Dataset Coverage
+  Unique Student_IDs : 60
+  Unique Subjects    : 5
+  Subjects listed    : ['Data Structures & Algorithms', 'Database Management Systems', 'Computer Networks', 'Theory of Computation', 'Software Engineering']
+
+[CHECK 16] Gender Distribution
+  Male: 34 students
+  Female: 26 students
+
+==================================================================
+  VALIDATION COMPLETE
+  All critical checks passed. Dataset is ready for EDA and modelling.
+  REMINDER: This is a SYNTHETIC dataset for academic use only.
+==================================================================

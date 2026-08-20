@@ -1,0 +1,110 @@
+====================================================================
+  VALIDATION REPORT — 205-STUDENT SYNTHETIC DATASET
+  Generated : 2026-08-20 15:03:37
+  File      : data\student_attendance_205_students.csv
+  NOTICE    : All data is SYNTHETIC. No real student records used.
+====================================================================
+
+[CHECK 1] Total Row Count
+  Total rows    : 4100
+  Expected (205 × 5 × 4) : 4100
+  Status : PASS
+
+[CHECK 2] Column Count
+  Columns found    : 21
+  Columns expected : 21
+  Missing columns  : None
+  Status : PASS
+
+[CHECK 3] Unique Student Count
+  Unique Student_IDs : 205
+  Status : PASS
+
+[CHECK 4] Student_ID Range
+  Min ID : STU0001
+  Max ID : STU0205
+  Status : PASS
+
+[CHECK 5] No Missing Student_IDs in STU0001–STU0205
+  Missing IDs : 0  
+  Extra IDs   : 0  
+  Status : PASS
+
+[CHECK 6] Existing Records (STU0001–STU0060) Preserved
+  Rows for STU0001–STU0060  : 1200
+  Original rows count       : 1200
+  Status : PASS
+
+[CHECK 7] New Students (STU0061–STU0205) Present
+  Rows for STU0061–STU0205 : 2900
+  Unique new students      : 145
+  Status : PASS
+
+[CHECK 8] Every Student Has Multiple Rows
+  Min rows per student    : 20
+  Max rows per student    : 20
+  Students with only 1 row: 0
+  Status : PASS
+
+[CHECK 9] Every Student Has Records for All 5 Subjects
+  Students with < 5 subjects : 0
+  Status : PASS
+
+[CHECK 10] Missing Values
+  Total missing cells : 0
+  Status : PASS
+
+[CHECK 11] Duplicate Rows
+  Duplicate rows : 0
+  Status : PASS
+
+[CHECK 12] Classes_Attended <= Total_Classes
+  Classes_Attended > Total_Classes : 0
+  Classes_Attended < 0             : 0
+  Status : PASS
+
+[CHECK 13] Attendance_Percentage in [0.0, 100.0]
+  Min    : 0.0
+  Max    : 100.0
+  Mean   : 68.67
+  Std    : 20.21
+  < 0    : 0    > 100 : 0
+  Status : PASS
+
+[CHECK 14] Attendance_Status Label Rule (>= 75 = Regular, else Defaulter)
+  Mismatched labels : 0
+  Status : PASS
+
+[CHECK 15] Regular / Defaulter Distribution
+  Defaulter   :  2266 rows  (55.3%)
+  Regular     :  1834 rows  (44.7%)
+  Both classes present : True
+  Status : PASS
+
+[CHECK 16] Rows per Subject
+  Computer Networks                       : 820 rows
+  Data Structures & Algorithms            : 820 rows
+  Database Management Systems             : 820 rows
+  Software Engineering                    : 820 rows
+  Theory of Computation                   : 820 rows
+
+[CHECK 17] Attendance_Percentage Formula Consistency
+  Formula mismatches : 0
+  Status : PASS
+
+====================================================================
+  FINAL SUMMARY
+====================================================================
+  Previous unique student count : 60
+  New students generated        : 145
+  Final unique student count    : 205
+  Final row count               : 4100
+  Student_ID range              : STU0001 to STU0205
+  Regular count                 : 1834
+  Defaulter count               : 2266
+  Files saved                   : data\student_attendance_205_students.csv
+                                  data\student_attendance_205_students.xlsx
+  Errors / Warnings             : None
+====================================================================
+  All checks complete. Dataset is SYNTHETIC. No real data used.
+====================================================================
