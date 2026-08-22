@@ -1,0 +1,166 @@
+======================================================================
+  FINAL DATASET VALIDATION REPORT
+  Generated: 2026-08-22 10:07:36
+======================================================================
+
+======================================================================
+  CHECK 1 · Dataset File Path
+======================================================================
+  Path : d:\Data_Science_attendence_project\data\student_attendance_205_students.csv
+  [PASS] File exists at the expected path
+
+======================================================================
+  CHECK 2 · Total Rows and Columns
+======================================================================
+  Rows    : 4,100
+  Columns : 21
+  Columns : ['Student_ID', 'Gender', 'Age', 'Department', 'Year', 'Semester', 'Subject', 'Attendance_Period', 'Total_Classes', 'Classes_Attended', 'Previous_Attendance_Percentage', 'Assignment_Score', 'Internal_Marks', 'Study_Hours_Per_Week', 'Medical_Leave_Days', 'Travel_Distance_KM', 'Previous_Exam_Score', 'Late_Count', 'Online_Class_Attendance', 'Attendance_Percentage', 'Attendance_Status']
+  [PASS] Dataset has rows > 0
+         -> 4,100 rows
+  [PASS] Dataset has columns > 0
+         -> 21 columns
+
+======================================================================
+  CHECK 3 & 4 · Unique Student_ID Count (Expected: 205)
+======================================================================
+  Unique Student_IDs : 205
+  [PASS] Student_ID column present
+  [PASS] Unique students == 205
+         -> Found 205
+
+======================================================================
+  CHECK 5 · Student_ID Range (Expected: STU0001 – STU0205)
+======================================================================
+  First ID : STU0001
+  Last ID  : STU0205
+  [PASS] First ID == STU0001
+         -> Got STU0001
+  [PASS] Last ID  == STU0205
+         -> Got STU0205
+
+======================================================================
+  CHECK 6 · Missing or Invalid Student_IDs
+======================================================================
+  Null Student_IDs         : 0
+  Malformed Student_IDs    : 0
+  IDs missing from STU0001-STU0205 range : 0
+  [PASS] No null Student_IDs
+         -> 0 nulls
+  [PASS] No malformed Student_IDs
+         -> 0 invalid
+  [PASS] No IDs missing from STU0001-STU0205
+         -> 0 missing
+
+======================================================================
+  CHECK 7 & 8 · Rows per Student_ID (Every Student Must Have Multiple Rows)
+======================================================================
+  Min rows per student  : 20
+  Max rows per student  : 20
+  Mean rows per student : 20.00
+  Students with only 1 row : 0
+  [PASS] Every student has > 1 row
+         -> Min rows = 20
+
+======================================================================
+  CHECK 9 · Unique Subjects
+======================================================================
+  Unique subjects (5) : ['Computer Networks', 'Data Structures & Algorithms', 'Database Management Systems', 'Software Engineering', 'Theory of Computation']
+  [PASS] At least 5 subjects found
+         -> Found 5: ['Computer Networks', 'Data Structures & Algorithms', 'Database Management Systems', 'Software Engineering', 'Theory of Computation']
+
+======================================================================
+  CHECK 10 · Every Student Has All 5 Subjects
+======================================================================
+  Students missing ≥1 subject : 0
+  [PASS] Every student has all subjects
+         -> 0 students have incomplete subjects
+
+======================================================================
+  CHECK 11 · Missing Values
+======================================================================
+  Total missing cells : 0
+  [PASS] No missing values
+         -> 0 missing
+
+======================================================================
+  CHECK 12 · Duplicate Rows
+======================================================================
+  Duplicate rows : 0
+  [PASS] No duplicate rows
+         -> 0 duplicates
+
+======================================================================
+  CHECK 13 · Classes_Attended ≤ Total_Classes
+======================================================================
+  Rows where Classes_Attended > Total_Classes : 0
+  [PASS] Classes_Attended ≤ Total_Classes for all rows
+         -> 0 violations
+  Classes_Attended range : [0, 12]
+  Total_Classes    range : [8, 12]
+
+======================================================================
+  CHECK 14 · Recalculate Attendance_Percentage
+======================================================================
+  Max difference (stored vs recalculated) : 0.0000
+  Rows with |diff| > 0.05                 : 0
+  [PASS] Attendance_Percentage matches recalculated values
+         -> 0 mismatches (max diff=0.0000)
+
+======================================================================
+  CHECK 15 & 16 · Attendance_Status Logic and Counts
+======================================================================
+  Status distribution:
+    Defaulter : 2,266
+    Regular : 1,834
+  Status mismatches (stored vs rule-based) : 0
+  [PASS] Attendance_Status follows the ≥75/< 75 rule
+         -> 0 mismatches
+  [PASS] Both 'Regular' and 'Defaulter' labels exist
+         -> Regular=1,834, Defaulter=2,266
+
+======================================================================
+  CHECK 17 · Numeric Column Ranges
+======================================================================
+  Attendance_Percentage: min=0.0, max=100.0  (expected [0, 100])
+  [PASS] Attendance_Percentage within expected range
+         -> min=0.0, max=100.0
+  Classes_Attended: min=0.0, max=12.0  (expected [0, inf])
+  [PASS] Classes_Attended within expected range
+         -> min=0.0, max=12.0
+  Total_Classes: min=8.0, max=12.0  (expected [1, inf])
+  [PASS] Total_Classes within expected range
+         -> min=8.0, max=12.0
+  Semester (text label) unique values : ['Fifth Semester', 'Third Semester']
+  [PASS] Semester column present and non-empty
+         -> 2 unique semester labels: ['Fifth Semester', 'Third Semester']
+
+======================================================================
+  CHECK 18 · No Private Data (Names / Roll Numbers / College Emails)
+======================================================================
+  Columns that may contain private data : []
+  Columns containing email-like strings : []
+  [PASS] No suspicious private-data columns
+         -> Suspicious columns: []
+  [PASS] No email-like strings in any column
+         -> Email hits in: []
+
+======================================================================
+  VALIDATION SUMMARY
+======================================================================
+  Total checks : 25
+  PASSED       : 25
+  FAILED       : 0
+
+  Dataset path         : d:\Data_Science_attendence_project\data\student_attendance_205_students.csv
+  Total rows           : 4,100
+  Total columns        : 21
+  Unique students      : 205
+  Student_ID range     : STU0001 - STU0205
+  Unique subjects      : 5
+  Missing values       : 0
+  Duplicate rows       : 0
+  Regular records      : 1,834
+  Defaulter records    : 2,266
+
+  [ALL PASS]  ALL CHECKS PASSED -- Dataset is ready for machine learning.
+======================================================================
