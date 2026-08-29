@@ -1,0 +1,9 @@
+Task Type,Model,MAE,MSE,RMSE,R2,Accuracy,Precision,Recall,F1-score,ROC-AUC,Best Model,Selection Criterion,Saved File
+Regression,LinearRegression,9.3679,134.8109,11.6108,0.6755,,,,,,No,Lowest RMSE,
+Regression,DecisionTreeRegressor,10.2138,164.6423,12.8313,0.6037,,,,,,No,Lowest RMSE,
+Regression,RandomForestRegressor,9.1673,130.7760,11.4357,0.6852,,,,,,No,Lowest RMSE,
+Regression,GradientBoostingRegressor,9.1786,129.8510,11.3952,0.6874,,,,,,Yes,Lowest RMSE,models/best_regression_model.joblib
+Classification,LogisticRegression,,,,,0.8390,0.8512,0.8587,0.8549,0.9246,No,Highest F1-score then Recall,
+Classification,DecisionTreeClassifier,,,,,0.8268,0.8659,0.8124,0.8383,0.8841,No,Highest F1-score then Recall,
+Classification,RandomForestClassifier,,,,,0.8451,0.8655,0.8521,0.8587,0.9276,No,Highest F1-score then Recall,
+Classification,GradientBoostingClassifier,,,,,0.8463,0.8625,0.8587,0.8606,0.9189,Yes,Highest F1-score then Recall,models/best_classification_model.joblib
