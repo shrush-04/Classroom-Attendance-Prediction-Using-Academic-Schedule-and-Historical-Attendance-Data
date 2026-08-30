@@ -1,8 +1,7 @@
-Model,Accuracy,Precision,Recall,F1-score,ROC-AUC,Note
-Dummy Classifier (Most Frequent),0.5,0.25,0.5,0.3333,N/A,Predicts Low for every test row — 2-class problem (Low + Medium only)
-Logistic Regression,0.5,0.25,0.5,0.3333,N/A,Ties baseline exactly — NO improvement — INVALID for operational use
-Decision Tree Classifier,0.5,0.25,0.5,0.3333,N/A,Ties baseline exactly
-Random Forest Classifier,0.25,0.1667,0.25,0.2,N/A,WORSE than baseline
-Support Vector Machine,0.5,0.5,0.5,0.5,N/A,Ties baseline (higher precision due to Lucky test split — unreliable)
-k-Nearest Neighbors,0.5,0.5,0.5,0.5,N/A,Ties baseline (Lucky test split — unreliable)
-NOTE: High attendance band (>75%) was NEVER observed in any of the 18 lectures. All observations are Low or Medium only.,,,,,,
+Model,Accuracy,Precision,Recall,F1-score,ROC-AUC
+Dummy Classifier (Most Frequent),0.5,0.25,0.5,0.3333,N/A
+Logistic Regression,0.5,0.25,0.5,0.3333,N/A
+Decision Tree Classifier,0.5,0.25,0.5,0.3333,N/A
+Random Forest Classifier,0.25,0.1667,0.25,0.2,N/A
+Support Vector Machine,0.5,0.5,0.5,0.5,N/A
+k-Nearest Neighbors,0.5,0.5,0.5,0.5,N/A

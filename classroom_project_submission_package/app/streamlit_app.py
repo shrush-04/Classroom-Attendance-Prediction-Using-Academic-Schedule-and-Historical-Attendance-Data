@@ -191,7 +191,7 @@ with st.sidebar:
 # ----------------- MAIN LAYOUT -----------------
 
 # Tab configuration
-tabs = st.tabs(["📊 Historical Analysis & Data Status", "🔮 Predictive Model Inference", "📜 Collection Protocols & Ethics"])
+tabs = st.tabs(["📊 Historical Analysis & Data Status", "🔮 Predictive Model Inference", "👨‍🎓 Student Attendance Risk Grid", "📜 Collection Protocols & Ethics"])
 
 # ================= TAB 1: DATA STATUS & VISUALIZATIONS =================
 with tabs[0]:
@@ -548,8 +548,112 @@ with tabs[1]:
             else:
                 st.error(res.get("message"))
 
-# ================= TAB 3: ETHICS, LIMITATIONS & PROTOCOLS =================
+# ================= TAB 3: STUDENT ATTENDANCE RISK GRID =================
 with tabs[2]:
+    st.markdown("### **Student Attendance Risk Grid (Cohort View)**")
+    st.markdown("This dashboard leverages the student-level predictive model trained on 4,100 records (205 students) to predict attendance risk across all subjects and periods.")
+    
+    # Load student model
+    student_model_path = os.path.join(models_dir, "student_attendance_model.joblib")
+    if os.path.exists(student_model_path):
+        model_pkg = joblib.load(student_model_path)
+        pipeline = model_pkg['pipeline']
+        
+        # Load dataset
+        student_data_path = os.path.join(os.path.dirname(project_root), "data", "student_attendance_205_students.csv")
+        student_df = pd.read_csv(student_data_path)
+        
+        # Generate predictions
+        X_stu = student_df[model_pkg['features']['categorical'] + model_pkg['features']['numeric']]
+        student_df['Predicted_Status'] = pipeline.predict(X_stu)
+        
+        # Filters
+        col_f1, col_f2 = st.columns(2)
+        with col_f1:
+            selected_subject = st.selectbox("Filter Subject", ["All"] + list(student_df['Subject'].unique()))
+        with col_f2:
+            selected_period = st.selectbox("Filter Period", ["All"] + list(student_df['Attendance_Period'].unique()))
+            
+        filtered_df = student_df.copy()
+        if selected_subject != "All":
+            filtered_df = filtered_df[filtered_df['Subject'] == selected_subject]
+        if selected_period != "All":
+            filtered_df = filtered_df[filtered_df['Attendance_Period'] == selected_period]
+            
+        # Create Pivot Grid: Student vs Subject + Period
+        filtered_df['Subj_Period'] = filtered_df['Subject'] + " (" + filtered_df['Attendance_Period'] + ")"
+        
+        # Pivot
+        pivot_df = filtered_df.pivot_table(
+            index='Student_ID', 
+            columns='Subj_Period', 
+            values='Predicted_Status', 
+            aggfunc=lambda x: x.iloc[0] if len(x) > 0 else "Unknown"
+        )
+        
+        # Display summary counts
+        n_regular = (filtered_df['Predicted_Status'] == 'Regular').sum()
+        n_defaulter = (filtered_df['Predicted_Status'] == 'Defaulter').sum()
+        
+        c_m1, c_m2, c_m3 = st.columns(3)
+        with c_m1:
+            st.markdown(f"<div class='glass-card'><div class='metric-lbl'>Total Profiles Analyzed</div><div class='metric-val'>{len(filtered_df)}</div></div>", unsafe_allow_html=True)
+        with c_m2:
+            st.markdown(f"<div class='glass-card'><div class='metric-lbl'>Predicted Regular</div><div class='metric-val' style='color:#34d399;'>{n_regular}</div></div>", unsafe_allow_html=True)
+        with c_m3:
+            st.markdown(f"<div class='glass-card'><div class='metric-lbl'>Predicted Defaulters (At Risk)</div><div class='metric-val' style='color:#f87171;'>{n_defaulter}</div></div>", unsafe_allow_html=True)
+            
+        st.markdown("#### **Visual Attendance Status Grid**")
+        st.caption("Green cells indicate predicted 'Regular' status; Red cells indicate predicted 'Defaulter' (attendance < 75% risk).")
+        
+        # Style and render pivot table
+        def color_status_grid(val):
+            if val == 'Regular':
+                return 'background-color: rgba(16, 185, 129, 0.25); color: #34d399; font-weight: bold; text-align: center;'
+            elif val == 'Defaulter':
+                return 'background-color: rgba(239, 68, 68, 0.25); color: #f87171; font-weight: bold; text-align: center;'
+            return 'background-color: rgba(255, 255, 255, 0.05); color: #8fa0b5; text-align: center;'
+
+        # Clean display
+        styled_pivot = pivot_df.style.applymap(color_status_grid)
+        st.dataframe(styled_pivot, use_container_width=True, height=450)
+        
+        # Individual search
+        st.markdown("---")
+        st.markdown("### **🔍 Individual Student Risk Profile Search**")
+        search_id = st.selectbox("Select Student ID", sorted(student_df['Student_ID'].unique()))
+        
+        student_records = student_df[student_df['Student_ID'] == search_id]
+        
+        col_s1, col_s2 = st.columns([1, 2])
+        with col_s1:
+            st.markdown(f"""
+            <div class='glass-card'>
+                <div class='card-title'>Student Info: {search_id}</div>
+                <p><b>Gender:</b> {student_records['Gender'].iloc[0]}</p>
+                <p><b>Age:</b> {student_records['Age'].iloc[0]}</p>
+                <p><b>Department:</b> {student_records['Department'].iloc[0]}</p>
+                <p><b>Semester:</b> {student_records['Semester'].iloc[0]}</p>
+                <p><b>Weekly Study Hours:</b> {student_records['Study_Hours_Per_Week'].iloc[0]} hrs</p>
+                <p><b>Travel Distance:</b> {student_records['Travel_Distance_KM'].iloc[0]} KM</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_s2:
+            st.markdown(f"#### **Subject-wise Predictions for {search_id}**")
+            subj_pred_df = student_records[['Subject', 'Attendance_Period', 'Assignment_Score', 'Internal_Marks', 'Late_Count', 'Online_Class_Attendance', 'Predicted_Status']]
+            st.dataframe(subj_pred_df.style.applymap(color_status_grid), use_container_width=True)
+            
+    else:
+        st.markdown("""
+        <div class='warning-card'>
+            <h4>⚠️ Student Prediction Model Not Trained</h4>
+            <p>Please run <code>python src/train_student_model.py</code> to train the classifier and enable this grid dashboard.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+# ================= TAB 4: ETHICS, LIMITATIONS & PROTOCOLS =================
+with tabs[3]:
     st.markdown("### **Ethical Considerations & System Constraints**")
     
     st.markdown("""

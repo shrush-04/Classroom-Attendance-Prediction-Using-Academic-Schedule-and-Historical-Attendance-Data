@@ -39,6 +39,8 @@
 | 17 | Final audit report (`FINAL_CLASSROOM_PROJECT_AUDIT.md`) | ✅ |
 | 18 | Generated college report (`report/project_report.pdf` - 31 pages) | ✅ |
 | 19 | Generated presentation slides (`presentation/project_presentation.pptx` - 13 slides) | ✅ |
+| 20 | Created modeling-format dataset (`data/processed/modeling_format_dataset.csv`) & data dictionary | ✅ |
+| 21 | Generated 2-month schedule templates & collection dataset with coverage report | ✅ |
 
 ---
 
