@@ -72,7 +72,7 @@ def main():
         },
         'accuracy': accuracy,
         'classes': clf.classes_.tolist()
-    }, model_save_path)
+    }, model_save_path, compress=9)
     print(f"Model saved successfully to: {model_save_path}")
 
 if __name__ == '__main__':
