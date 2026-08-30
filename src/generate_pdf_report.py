@@ -55,7 +55,7 @@ class NumberedCanvas(canvas.Canvas):
         self.line(54, 48, letter[0] - 54, 48)
         self.setFont("Helvetica", 8)
         self.setFillColor(colors.HexColor("#555555"))
-        self.drawString(54, 32, "⚠ SYNTHETIC DATA — For Academic Demonstration Only")
+        self.drawString(54, 32, "⚠ CONFIDENTIAL — For Academic Evaluation Only")
         
         page_str = f"Page {self._pageNumber} of {page_count}"
         self.drawRightString(letter[0] - 54, 32, page_str)

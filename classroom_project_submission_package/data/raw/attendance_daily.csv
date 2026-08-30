@@ -1,0 +1,20 @@
+Date,Approx_Start_Time,Approx_End_Time,Students_Present_Count,Confidence,Notes
+25-06-2026,08:15,09:15,46,medium,
+29-06-2026,08:15,08:45,31,medium,
+30-06-2026,08:15,09:30,19,medium,
+02-07-2026,08:00,09:15,27,medium,
+03-07-2026,08:30,08:50,12,high,
+09-07-2026,09:00,09:45,20,medium,
+10-07-2026,08:00,10:15,30,medium,
+22-07-2026,08:30,09:50,15,low,verify date digit
+23-07-2026,08:00,09:00,30,low,verify date digit
+27-07-2026,08:00,08:35,8,medium,
+28-07-2026,09:00,09:16,49,medium,
+29-07-2026,09:00,09:30,60,medium,
+30-07-2026,09:00,09:45,60,low,verify page split
+01-08-2026,08:00,09:00,9,medium,
+03-08-2026,09:00,09:15,14,medium,
+05-08-2026,09:00,09:30,57,medium,
+06-08-2026,08:00,13:30,43,low,has two sessions - split not fully verified
+07-08-2026,09:15,09:35,28,medium,
+11-08-2026,12:45,,1,high,single time only - no end time recorded

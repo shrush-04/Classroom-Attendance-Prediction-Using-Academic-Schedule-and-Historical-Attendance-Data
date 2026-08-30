@@ -1,0 +1,22 @@
+CLASSROOM ATTENDANCE DATA VALIDATION REPORT
+===========================================
+Data Row Count: 18
+Validation Status: PASSED
+Errors Found: 0
+
+[PASS] Required Columns: All required columns are present.
+[PASS] Lecture_ID Validation: Lecture_ID format and uniqueness are valid.
+[PASS] Date Format: All dates are in correct YYYY-MM-DD format.
+[PASS] Time Format: Time formats are valid.
+[PASS] Chronological Order: Data is chronologically sorted.
+[PASS] Enrollment Capacity: Present counts are less than or equal to Enrolled counts.
+[PASS] Non-negative Counts: All student counts are non-negative.
+[PASS] Attendance Percentage Formula: All attendance percentages match (Present/Enrolled) * 100.
+[PASS] Missing Values in Required Columns: No missing values in required columns.
+[PASS] Duplicate Rows: No duplicate rows found.
+[PASS] Categorical Values: All categorical fields contain valid levels.
+[PASS] Subject Consistency: Subjects recorded (2 types): ['Mobile Application Development', 'MAD Practical']
+[PASS] Section Consistency: Sections recorded: ['A+B']
+[PASS] Faculty_ID Consistency: Faculty_IDs are valid. Faculty count: 2
+[PASS] No PII Columns: No personal identifier columns (names, emails, rolls) exist in schema.
+[PASS] No PII Data Values: No student names, roll numbers, or email values found in cell content.

@@ -1,0 +1,29 @@
+﻿Day_of_Week,Lecture_Number,Start_Time,End_Time,Subject,Faculty_ID,Semester,Branch,Section,Classroom,Total_Enrolled_Students
+Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Monday,2,09:15,10:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,III,MCA,A+B,Computer Lab,NULL
+Monday,4,11:15,12:15,Innovation and Entrepreneurship Development,F_02+F_13,III,MCA,A+B,Computer Lab,NULL
+Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,III,MCA,A+B,Computer Lab,NULL
+Tuesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Tuesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Tuesday,3,10:15,11:15,Principles of Cloud Management and Security,F_03+F_04,III,MCA,A+B,Computer Lab,NULL
+Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,III,MCA,A+B,Computer Lab,NULL
+Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,III,MCA,A+B,Computer Lab,NULL
+Wednesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Wednesday,3,10:15,11:15,Software Testing and Quality Assurance,F_05+F_06,III,MCA,A+B,Computer Lab,NULL
+Wednesday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,III,MCA,A+B,Computer Lab,NULL
+Wednesday,5,13:30,15:30,Innovation and Entrepreneurship Development,F_02+F_13,III,MCA,A+B,Computer Lab,NULL
+Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Thursday,3,10:15,11:15,Data Science and Machine Learning,F_07+F_08,III,MCA,A+B,Computer Lab,NULL
+Thursday,4,11:15,12:15,Software Testing and Quality Assurance,F_05+F_06,III,MCA,A+B,Computer Lab,NULL
+Thursday,5,13:30,15:30,Industry Readiness Program,NULL,III,MCA,A+B,Computer Lab,NULL
+Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Friday,2,09:15,10:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,NULL
+Friday,3,10:15,11:15,Data Science and Machine Learning,F_07+F_08,III,MCA,A+B,Computer Lab,NULL
+Friday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,III,MCA,A+B,Computer Lab,NULL
+Friday,5,13:30,15:30,Software Testing and Quality Assurance,F_05+F_06,III,MCA,A+B,Computer Lab,NULL
+Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,III,MCA,A+B,Computer Lab,NULL
+Saturday,2,09:15,10:15,MAD Practical,F_01+F_11+F_02+F_12,III,MCA,A+B,Computer Lab,NULL
+Saturday,3,11:15,12:15,Mini Project,NULL,III,MCA,A+B,Computer Lab,NULL

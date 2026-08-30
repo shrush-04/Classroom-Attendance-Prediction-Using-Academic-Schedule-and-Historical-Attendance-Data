@@ -1,0 +1,8 @@
+Model_Name,Hyperparameters,MAE,RMSE,R2,Avg_Fold_Train_Time_ms,Total_LOOCV_Time_ms,Accuracy,F1_Score
+Dummy Baseline (Mean),strategy='mean',18.9706,22.6294,-0.1211,4.28,93.73,,
+Linear Regression,fit_intercept=True,34.3147,40.8465,-2.6527,4.21,92.65,,
+Decision Tree,"random_state=42, max_depth=3",22.2917,27.5139,-0.6573,2.89,72.51,,
+Random Forest,"random_state=42, n_estimators=50, max_depth=3",21.8151,23.378,-0.1965,59.48,1098.06,,
+Dummy Classifier (MF),strategy='most_frequent',,,,1.49,41.42,0.0,0.0
+Logistic Regression,"max_iter=1000, random_state=42",,,,12.45,248.03,0.2778,0.2651
+Decision Tree Classifier,"random_state=42, max_depth=3",,,,3.56,84.63,0.2222,0.2074

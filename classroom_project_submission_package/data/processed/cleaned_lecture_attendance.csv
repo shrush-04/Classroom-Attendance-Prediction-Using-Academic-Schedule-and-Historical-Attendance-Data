@@ -1,0 +1,19 @@
+Lecture_ID,Date,Day_of_Week,Lecture_Number,Start_Time,End_Time,Subject,Faculty_ID,Semester,Branch,Section,Classroom,Total_Enrolled_Students,Students_Present,Attendance_Percentage,Previous_Lecture_Attendance_Percentage,Gap_Since_Previous_Lecture_Hours,Practical_Theory,Internal_Test_Week,Assignment_Due,Holiday_Before_After,Weather,Special_Event
+LEC0001,2026-06-25,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,46,57.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0002,2026-06-29,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,31,38.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0003,2026-06-30,Tuesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,19,23.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0004,2026-07-02,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,27,33.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0005,2026-07-03,Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,12,15.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0006,2026-07-09,Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,20,25.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0007,2026-07-10,Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0008,2026-07-22,Wednesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,15,18.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0009,2026-07-23,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0010,2026-07-27,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,8,10.0,,,Theory,0,0,Holiday_After,Not_Collected,Not_Collected
+LEC0011,2026-07-28,Tuesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,49,61.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0012,2026-07-29,Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0013,2026-07-30,Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0014,2026-08-01,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,9,11.25,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0015,2026-08-03,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,14,17.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0016,2026-08-05,Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,57,71.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0017,2026-08-06,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,43,53.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0018,2026-08-07,Friday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,28,35.0,,,Theory,0,0,None,Not_Collected,Not_Collected

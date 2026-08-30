@@ -15,10 +15,16 @@ classroom-attendance-schedule-project/
 ├── models/                   # Serialized ML pipeline joblib files
 ├── outputs/
 │   ├── charts/               # Generated EDA and model performance charts
-│   └── experiment_results/   # CSV lists of metrics for compared algorithms
+│   ├── experiment_results/   # CSV lists of metrics for compared algorithms
+│   ├── final_demo_instructions.md # Guide to running dashboard demos ✅
+│   └── final_viva_summary.md # Viva presentation Q&A sheet ✅
 ├── app/                      # Streamlit application dashboard code
-├── report/                   # Detailed academic project report template
-├── presentation/             # Viva questions and presentation guides
+├── report/
+│   ├── project_report.md     # Markdown project report
+│   └── project_report.pdf    # Compiled professional PDF report ✅
+├── presentation/
+│   ├── presentation_content.md # Presentation script
+│   └── project_presentation.pptx # Compiled slide deck (13 slides) ✅
 └── docs/                     # Administrative checklists and collection protocol docs
 ```
 
@@ -86,3 +92,7 @@ streamlit run classroom-attendance-schedule-project/app/streamlit_app.py
 - Cannot capture spontaneous external shifts (e.g. transport strikes) not scheduled in academic logs.
 - Predictions for the first week of semesters default to historical averages due to lag limitations.
 - Requires physically verified class registers for baseline training.
+
+
+## Dataset Placeholders (Continuous Evaluation Features)
+- Internal_Test_Week and Assignment_Due columns are added in ttendance_stage1_final.csv as placeholders for future academic calendar integration. They are left blank/NaN intentionally because the official internal CIE (Continuous Internal Evaluation) exam schedule was not publicly available at the time of dataset construction. These represent planned future data collections rather than erroneous missing data.

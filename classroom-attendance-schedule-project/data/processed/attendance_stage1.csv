@@ -1,0 +1,20 @@
+Date,Day_of_Week,Lecture_Number,Start_Time,End_Time,Approx_Start_Time,Approx_End_Time,Subject,Faculty_ID,Semester,Branch,Section,Classroom,Total_Enrolled_Students,Students_Present_Count,Confidence,Notes,Match_Type,Flag_Stray_Entry,Attendance_Percentage,Flag_Impossible
+2026-06-25,Thursday,1,08:30,09:15,08:15,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,46,medium,,exact,False,57.5,False
+2026-06-29,Monday,1,08:30,09:15,08:15,08:45,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,31,medium,,exact,False,38.75,False
+2026-06-30,Tuesday,1,08:30,09:15,08:15,09:30,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,19,medium,,exact,False,23.75,False
+2026-07-02,Thursday,1,08:30,09:15,08:00,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,27,medium,,approx,False,33.75,False
+2026-07-03,Friday,1,08:30,09:15,08:30,08:50,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,12,high,,exact,False,15.0,False
+2026-07-09,Thursday,2,09:15,10:15,09:00,09:45,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,20,medium,,exact,False,25.0,False
+2026-07-10,Friday,1,08:30,09:15,08:00,10:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,30,medium,,approx,False,37.5,False
+2026-07-22,Wednesday,1,08:30,09:15,08:30,09:50,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,15,low,verify date digit,exact,False,18.75,False
+2026-07-23,Thursday,1,08:30,09:15,08:00,09:00,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,30,low,verify date digit,approx,False,37.5,False
+2026-07-27,Monday,1,08:30,09:15,08:00,08:35,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,8,medium,,approx,False,10.0,False
+2026-07-28,Tuesday,2,09:15,10:15,09:00,09:16,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,49,medium,,exact,False,61.25,False
+2026-07-29,Wednesday,2,09:15,10:15,09:00,09:30,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,60,medium,,exact,False,75.0,False
+2026-07-30,Thursday,2,09:15,10:15,09:00,09:45,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,60,low,verify page split,exact,False,75.0,False
+2026-08-01,Saturday,1,08:30,09:15,08:00,09:00,MAD Practical,F_01+F_11+F_02+F_12,III,MCA,A+B,Computer Lab,80,9,medium,,approx,False,11.25,False
+2026-08-03,Monday,1,08:30,09:15,09:00,09:15,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,14,medium,,approx,False,17.5,False
+2026-08-05,Wednesday,2,09:15,10:15,09:00,09:30,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,57,medium,,exact,False,71.25,False
+2026-08-06,Thursday,1,08:30,09:15,08:00,13:30,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,43,low,has two sessions - split not fully verified,approx,False,53.75,False
+2026-08-07,Friday,2,09:15,10:15,09:15,09:35,Mobile Application Development,F_01+F_13,III,MCA,A+B,Computer Lab,80,28,medium,,exact,False,35.0,False
+2026-08-11,Tuesday,5,13:30,15:30,12:45,,DS and ML Practical,F_07+F_08+F_03+F_04,III,MCA,A+B,Computer Lab,80,1,high,single time only - no end time recorded,approx,True,1.25,False

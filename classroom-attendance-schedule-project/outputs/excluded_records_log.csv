@@ -1,0 +1,2 @@
+Date,Day_of_Week,Lecture_Number,Start_Time,End_Time,Approx_Start_Time,Approx_End_Time,Subject,Faculty_ID,Semester,Branch,Section,Classroom,Total_Enrolled_Students,Students_Present_Count,Confidence,Notes,Match_Type,Reason
+11-08-2026,Tuesday,5,13:30,15:30,12:45,,DS and ML Practical,F_07+F_08+F_03+F_04,III,MCA,A+B,Computer Lab,,1,high,single time only - no end time recorded,approx,"Stray/incomplete register log on holiday/exam day. Single time value, only 1 student present."

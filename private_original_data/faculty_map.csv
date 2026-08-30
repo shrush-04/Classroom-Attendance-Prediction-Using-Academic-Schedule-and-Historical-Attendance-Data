@@ -1,0 +1,14 @@
+﻿Faculty_ID,Original_Code,Role_Context,Subject_Association
+F_01,SSP,Regular Faculty,Mobile Application Development
+F_02,JSP,Regular Faculty,Innovation and Entrepreneurship Development
+F_03,KSD,Regular Faculty,Principles of Cloud Management and Security
+F_04,SDM,Co-Faculty,Principles of Cloud Management and Security
+F_05,DPY,Regular Faculty,Software Testing and Quality Assurance
+F_06,AAB,Co-Faculty,Software Testing and Quality Assurance
+F_07,SP,Regular Faculty,Data Science and Machine Learning
+F_08,MLK,Co-Faculty,Data Science and Machine Learning
+F_09,MST,Lab Faculty,STQA Practical
+F_10,MPS,Lab Faculty,STQA Practical
+F_11,ASP,Lab Faculty,MAD Practical
+F_12,RSZ,Lab Faculty,MAD Practical
+F_13,Visiting,Visiting Faculty,Mobile Application Development / IED
