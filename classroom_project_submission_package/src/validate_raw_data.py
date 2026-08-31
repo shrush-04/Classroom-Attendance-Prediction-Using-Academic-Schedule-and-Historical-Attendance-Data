@@ -160,13 +160,16 @@ def run_validation(data_path, output_dir=None):
     else:
         checks["Missing Values in Required Columns"] = (True, "No missing values in required columns.")
 
-    # 10. Duplicate rows (all columns except Lecture_ID)
-    dup_rows = df.duplicated(subset=[col for col in df.columns if col != 'Lecture_ID'], keep=False)
+    # 10. Duplicate rows — check only scheduling key columns (not placeholder fields)
+    dup_key_cols = ['Date', 'Day_of_Week', 'Lecture_Number', 'Start_Time', 'Subject', 'Section']
+    dup_key_cols = [c for c in dup_key_cols if c in df.columns]
+    dup_rows = df.duplicated(subset=dup_key_cols, keep=False)
     if dup_rows.any():
-        checks["Duplicate Rows"] = (False, f"Found {df[dup_rows].shape[0]} duplicate rows (identical fields).")
+        checks["Duplicate Rows"] = (False, f"Found {df[dup_rows].shape[0]} duplicate rows (identical scheduling key).")
         errors_list.append(f"Duplicate rows count: {df[dup_rows].shape[0]}")
     else:
         checks["Duplicate Rows"] = (True, "No duplicate rows found.")
+
 
     # 11. Invalid categorical values
     cat_errors = []

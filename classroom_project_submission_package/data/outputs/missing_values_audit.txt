@@ -1,0 +1,9 @@
+MISSING VALUES LOG & ETHICAL AUDIT
+==================================
+
+In compliance with academic data constraints, missing data is documented rather than fabricated.
+
+- Column 'Previous_Lecture_Attendance_Percentage': 81 missing values. Reason: Optional academic/environmental field not logged at lecture time.
+- Column 'Gap_Since_Previous_Lecture_Hours': 81 missing values. Reason: Optional academic/environmental field not logged at lecture time.
+- Column 'Weather': 81 missing values. Reason: Optional academic/environmental field not logged at lecture time.
+- Column 'Special_Event': 81 missing values. Reason: Optional academic/environmental field not logged at lecture time.

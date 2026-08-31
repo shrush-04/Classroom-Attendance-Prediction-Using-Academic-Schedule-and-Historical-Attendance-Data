@@ -1,6 +1,6 @@
 CLASSROOM ATTENDANCE DATA VALIDATION REPORT
 ===========================================
-Data Row Count: 18
+Data Row Count: 81
 Validation Status: PASSED
 Errors Found: 0
 
@@ -15,8 +15,8 @@ Errors Found: 0
 [PASS] Missing Values in Required Columns: No missing values in required columns.
 [PASS] Duplicate Rows: No duplicate rows found.
 [PASS] Categorical Values: All categorical fields contain valid levels.
-[PASS] Subject Consistency: Subjects recorded (2 types): ['Mobile Application Development', 'MAD Practical']
+[PASS] Subject Consistency: Subjects recorded (10 types): ['Mobile Application Development', 'Data Science and Machine Learning', 'Principles of Cloud Management and Security', 'Software Testing and Quality Assurance', 'Innovation and Entrepreneurship Development', 'STQA Practical', 'DS and ML Practical', 'Industry Readiness Program', 'Mini Project', 'MAD Practical']
 [PASS] Section Consistency: Sections recorded: ['A+B']
-[PASS] Faculty_ID Consistency: Faculty_IDs are valid. Faculty count: 2
+[PASS] Faculty_ID Consistency: Faculty_IDs are valid. Faculty count: 9
 [PASS] No PII Columns: No personal identifier columns (names, emails, rolls) exist in schema.
 [PASS] No PII Data Values: No student names, roll numbers, or email values found in cell content.

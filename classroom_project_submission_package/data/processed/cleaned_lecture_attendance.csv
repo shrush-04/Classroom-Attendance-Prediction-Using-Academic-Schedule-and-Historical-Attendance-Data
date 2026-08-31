@@ -1,19 +1,82 @@
 Lecture_ID,Date,Day_of_Week,Lecture_Number,Start_Time,End_Time,Subject,Faculty_ID,Semester,Branch,Section,Classroom,Total_Enrolled_Students,Students_Present,Attendance_Percentage,Previous_Lecture_Attendance_Percentage,Gap_Since_Previous_Lecture_Hours,Practical_Theory,Internal_Test_Week,Assignment_Due,Holiday_Before_After,Weather,Special_Event
-LEC0001,2026-06-25,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,46,57.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
-LEC0002,2026-06-29,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,31,38.75,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0003,2026-06-30,Tuesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,19,23.75,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0004,2026-07-02,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,27,33.75,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0005,2026-07-03,Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,12,15.0,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0006,2026-07-09,Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,20,25.0,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0007,2026-07-10,Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0008,2026-07-22,Wednesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,15,18.75,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0009,2026-07-23,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
-LEC0010,2026-07-27,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,8,10.0,,,Theory,0,0,Holiday_After,Not_Collected,Not_Collected
-LEC0011,2026-07-28,Tuesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,49,61.25,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0012,2026-07-29,Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0013,2026-07-30,Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0014,2026-08-01,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,9,11.25,,,Practical,0,0,None,Not_Collected,Not_Collected
-LEC0015,2026-08-03,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,14,17.5,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0016,2026-08-05,Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,57,71.25,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0017,2026-08-06,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,43,53.75,,,Theory,0,0,None,Not_Collected,Not_Collected
-LEC0018,2026-08-07,Friday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,28,35.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0001,2026-06-24,Tuesday,3,10:15,11:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,44,55.0,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0002,2026-06-24,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,42,52.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0003,2026-06-25,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,46,57.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0004,2026-06-25,Thursday,4,11:15,12:15,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,38,47.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0005,2026-06-29,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,31,38.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0006,2026-06-29,Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,27,33.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0007,2026-06-30,Tuesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,19,23.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0008,2026-06-30,Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,Third Semester,MCA,A+B,Computer Lab,80,8,10.0,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0009,2026-07-01,Wednesday,3,10:15,11:15,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,32,40.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0010,2026-07-01,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,35,43.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0011,2026-07-01,Wednesday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,36,45.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0012,2026-07-01,Wednesday,5,13:30,15:30,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,31,38.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0013,2026-07-01,Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,12,15.0,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0014,2026-07-02,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,27,33.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0015,2026-07-03,Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,12,15.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0016,2026-07-03,Thursday,3,10:15,11:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,38,47.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0017,2026-07-03,Thursday,5,13:30,15:30,Industry Readiness Program,F_99,Third Semester,MCA,A+B,Computer Lab,80,55,68.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0018,2026-07-04,Friday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0019,2026-07-04,Saturday,5,13:30,15:30,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,28,35.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0020,2026-07-05,Saturday,3,11:15,12:15,Mini Project,F_99,Third Semester,MCA,A+B,Computer Lab,80,20,25.0,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0021,2026-07-06,Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,34,42.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0022,2026-07-07,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,45,56.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0023,2026-07-07,Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,Third Semester,MCA,A+B,Computer Lab,80,14,17.5,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0024,2026-07-08,Wednesday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,41,51.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0025,2026-07-08,Wednesday,5,13:30,15:30,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,39,48.75,,,Theory,0,1,None,Not_Collected,Not_Collected
+LEC0026,2026-07-08,Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,18,22.5,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0027,2026-07-09,Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,20,25.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0028,2026-07-09,Thursday,4,11:15,12:15,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,40,50.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0029,2026-07-10,Friday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0030,2026-07-10,Friday,3,10:15,11:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,29,36.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0031,2026-07-10,Thursday,5,13:30,15:30,Industry Readiness Program,F_99,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0032,2026-07-11,Friday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,53,66.25,,,Theory,0,1,None,Not_Collected,Not_Collected
+LEC0033,2026-07-12,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,14,17.5,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0034,2026-07-12,Saturday,3,11:15,12:15,Mini Project,F_99,Third Semester,MCA,A+B,Computer Lab,80,25,31.25,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0035,2026-07-13,Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,22,27.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0036,2026-07-14,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,51,63.75,,,Theory,0,1,None,Not_Collected,Not_Collected
+LEC0037,2026-07-14,Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,Third Semester,MCA,A+B,Computer Lab,80,19,23.75,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0038,2026-07-15,Tuesday,3,10:15,11:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,37,46.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0039,2026-07-15,Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,24,30.0,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0040,2026-07-16,Thursday,4,11:15,12:15,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,47,58.75,,,Theory,0,1,None,Not_Collected,Not_Collected
+LEC0041,2026-07-17,Friday,3,10:15,11:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,33,41.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0042,2026-07-17,Thursday,5,13:30,15:30,Industry Readiness Program,F_99,Third Semester,MCA,A+B,Computer Lab,80,48,60.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0043,2026-07-19,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,20,25.0,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0044,2026-07-19,Saturday,3,11:15,12:15,Mini Project,F_99,Third Semester,MCA,A+B,Computer Lab,80,18,22.5,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0045,2026-07-20,Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,18,22.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0046,2026-07-21,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,25,31.25,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0047,2026-07-21,Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,Third Semester,MCA,A+B,Computer Lab,80,7,8.75,,,Practical,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0048,2026-07-22,Wednesday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,15,18.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0049,2026-07-22,Wednesday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,29,36.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0050,2026-07-22,Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,10,12.5,,,Practical,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0051,2026-07-23,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0052,2026-07-23,Thursday,4,11:15,12:15,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,22,27.5,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0053,2026-07-24,Thursday,5,13:30,15:30,Industry Readiness Program,F_99,Third Semester,MCA,A+B,Computer Lab,80,35,43.75,,,Theory,0,0,Holiday_Before,Not_Collected,Not_Collected
+LEC0054,2026-07-25,Saturday,5,13:30,15:30,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,35,43.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0055,2026-07-26,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,16,20.0,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0056,2026-07-26,Saturday,3,11:15,12:15,Mini Project,F_99,Third Semester,MCA,A+B,Computer Lab,80,22,27.5,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0057,2026-07-27,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,8,10.0,,,Theory,0,0,Holiday_After,Not_Collected,Not_Collected
+LEC0058,2026-07-27,Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,14,17.5,,,Theory,0,0,Holiday_After,Not_Collected,Not_Collected
+LEC0059,2026-07-28,Tuesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,49,61.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0060,2026-07-28,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,58,72.5,,,Theory,1,0,None,Not_Collected,Not_Collected
+LEC0061,2026-07-28,Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,Third Semester,MCA,A+B,Computer Lab,80,22,27.5,,,Practical,1,0,None,Not_Collected,Not_Collected
+LEC0062,2026-07-29,Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0063,2026-07-29,Wednesday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,56,70.0,,,Theory,1,0,None,Not_Collected,Not_Collected
+LEC0064,2026-07-29,Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,31,38.75,,,Practical,1,0,None,Not_Collected,Not_Collected
+LEC0065,2026-07-30,Thursday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,60,75.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0066,2026-07-31,Thursday,5,13:30,15:30,Industry Readiness Program,F_99,Third Semester,MCA,A+B,Computer Lab,80,52,65.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0067,2026-08-01,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,9,11.25,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0068,2026-08-01,Friday,5,13:30,15:30,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,54,67.5,,,Theory,1,0,None,Not_Collected,Not_Collected
+LEC0069,2026-08-02,Saturday,1,08:30,09:15,MAD Practical,F_01+F_11+F_02+F_12,Third Semester,MCA,A+B,Computer Lab,80,11,13.75,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0070,2026-08-02,Saturday,3,11:15,12:15,Mini Project,F_99,Third Semester,MCA,A+B,Computer Lab,80,30,37.5,,,Practical,0,0,None,Not_Collected,Not_Collected
+LEC0071,2026-08-03,Monday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,14,17.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0072,2026-08-03,Monday,3,10:15,11:15,Innovation and Entrepreneurship Development,F_02+F_13,Third Semester,MCA,A+B,Computer Lab,80,26,32.5,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0073,2026-08-04,Tuesday,4,11:15,12:15,Data Science and Machine Learning,F_07+F_08,Third Semester,MCA,A+B,Computer Lab,80,62,77.5,,,Theory,1,1,None,Not_Collected,Not_Collected
+LEC0074,2026-08-04,Monday,5,13:30,15:30,STQA Practical,F_05+F_06+F_09+F_10,Third Semester,MCA,A+B,Computer Lab,80,28,35.0,,,Practical,1,0,None,Not_Collected,Not_Collected
+LEC0075,2026-08-05,Wednesday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,57,71.25,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0076,2026-08-05,Wednesday,4,11:15,12:15,Principles of Cloud Management and Security,F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,48,60.0,,,Theory,1,0,None,Not_Collected,Not_Collected
+LEC0077,2026-08-05,Tuesday,5,13:30,15:30,DS and ML Practical,F_07+F_08+F_03+F_04,Third Semester,MCA,A+B,Computer Lab,80,35,43.75,,,Practical,1,0,None,Not_Collected,Not_Collected
+LEC0078,2026-08-06,Thursday,1,08:30,09:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,43,53.75,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0079,2026-08-06,Thursday,4,11:15,12:15,Software Testing and Quality Assurance,F_05+F_06,Third Semester,MCA,A+B,Computer Lab,80,49,61.25,,,Theory,1,0,None,Not_Collected,Not_Collected
+LEC0080,2026-08-07,Friday,2,09:15,10:15,Mobile Application Development,F_01+F_13,Third Semester,MCA,A+B,Computer Lab,80,28,35.0,,,Theory,0,0,None,Not_Collected,Not_Collected
+LEC0081,2026-08-07,Thursday,5,13:30,15:30,Industry Readiness Program,F_99,Third Semester,MCA,A+B,Computer Lab,80,58,72.5,,,Theory,0,0,None,Not_Collected,Not_Collected

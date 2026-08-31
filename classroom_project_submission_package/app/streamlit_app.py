@@ -157,6 +157,34 @@ if models_trained:
     except Exception:
         pass
 
+# ── Per-subject historical averages (from real attendance data) ───────────────
+# Fallback averages for subjects with no real lecture records yet
+_SUBJECT_DEFAULTS = {
+    "Mobile Application Development":           {"pct": 40.37, "present": 32, "n": 17},
+    "MAD Practical":                            {"pct": 11.25, "present": 9,  "n": 1},
+    "Data Science and Machine Learning":        {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "Software Testing and Quality Assurance":   {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "Principles of Cloud Management and Security": {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "Innovation and Entrepreneurship Development":  {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "STQA Practical":                           {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "DS and ML Practical":                      {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "Mini Project":                             {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+    "Industry Readiness Program":               {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0},
+}
+# Override with real computed averages if cleaned data exists
+if data_exists:
+    try:
+        _df_hist = pd.read_csv(cleaned_data_path)
+        for _subj, _grp in _df_hist.groupby("Subject"):
+            if _subj in _SUBJECT_DEFAULTS:
+                _SUBJECT_DEFAULTS[_subj] = {
+                    "pct":     round(float(_grp["Attendance_Percentage"].mean()), 2),
+                    "present": int(round(_grp["Students_Present"].mean())),
+                    "n":       len(_grp),
+                }
+    except Exception:
+        pass
+
 # Header Section
 st.markdown("<div class='title-text'>Classroom Attendance Prediction System</div>", unsafe_allow_html=True)
 st.markdown("<div class='subtitle-text'>Lecture-level predictive insights derived from timetables, exam calendars, and historical registers (MCA Final Year - Sem III)</div>", unsafe_allow_html=True)
@@ -410,11 +438,49 @@ with tabs[1]:
 
         st.markdown("### **Lecture Parameter Entry**")
 
-        
         # Load best model features
         reg_package = joblib.load(reg_model_path)
         feature_cols = reg_package['features']
-        
+
+        # ── Subject selector OUTSIDE form so lag defaults update immediately ──
+        _SUBJECT_LIST = [
+            "Mobile Application Development",
+            "Data Science and Machine Learning",
+            "Software Testing and Quality Assurance",
+            "Principles of Cloud Management and Security",
+            "Innovation and Entrepreneurship Development",
+            "MAD Practical",
+            "DS and ML Practical",
+            "STQA Practical",
+            "Mini Project",
+            "Industry Readiness Program",
+        ]
+        subject = st.selectbox(
+            "📚 Subject",
+            _SUBJECT_LIST,
+            key="pred_subject",
+            help="Select a subject — historical lag defaults will auto-update to that subject's real averages."
+        )
+        # Look up this subject's real historical average
+        _subj_stats = _SUBJECT_DEFAULTS.get(subject, {"pct": hist_mean_pct, "present": hist_mean_present, "n": 0})
+        _subj_hist_pct     = float(_subj_stats["pct"])
+        _subj_hist_present = int(_subj_stats["present"])
+        _subj_hist_n       = int(_subj_stats["n"])
+
+        # Show a small info badge about the data coverage for this subject
+        if _subj_hist_n > 0:
+            st.markdown(f"""
+            <div class='success-card' style='padding:10px 15px;margin-bottom:10px;'>
+                📊 <b>{subject}</b> — <b>{_subj_hist_n} recorded lectures</b> |
+                Historical avg: <b>{_subj_hist_pct:.1f}%</b> (~{_subj_hist_present} students present out of 80)
+            </div>""", unsafe_allow_html=True)
+        else:
+            st.markdown(f"""
+            <div class='baseline-card' style='padding:10px 15px;margin-bottom:10px;'>
+                ⚠️ <b>{subject}</b> — No recorded lectures yet.
+                Showing overall class average as default ({_subj_hist_pct:.1f}%).
+            </div>""", unsafe_allow_html=True)
+
         # Predictor Input Form
         with st.form("prediction_form"):
             col_in1, col_in2, col_in3 = st.columns(3)
@@ -422,33 +488,44 @@ with tabs[1]:
                 date_input = st.date_input("Date")
                 day_input = st.selectbox("Day of Week", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
                 lecture_number = st.slider("Lecture Number Slot", 1, 8, 1)
-                start_time = st.selectbox("Start Time", ["09:00", "10:15", "11:30", "13:30", "14:45", "16:00"])
-                end_time = st.selectbox("End_Time", ["10:00", "11:15", "12:30", "14:30", "15:45", "17:00"])
-                
+                start_time = st.selectbox("Start Time", ["08:30", "09:15", "10:15", "11:15", "13:30", "15:30"])
+                end_time = st.selectbox("End Time", ["09:15", "10:15", "11:15", "12:15", "15:30", "17:00"])
+
             with col_in2:
-                subject = st.text_input("Subject (e.g. Mobile Application Development)", value="Mobile Application Development")
+                # Subject label (read-only — selected above outside the form)
+                st.text_input("Subject (selected above)", value=subject, disabled=True)
                 faculty_id = st.text_input("Faculty ID (e.g. F_01)", value="F_01")
                 semester = st.selectbox("Semester", ["Third Semester"])
                 branch = st.selectbox("Branch", ["MCA"])
                 section = st.selectbox("Section", ["A+B", "A", "B"])
-                classroom = st.text_input("Classroom (e.g. CR201)", value="CR201")
-                
+                classroom = st.text_input("Classroom (e.g. CR201)", value="Computer Lab")
+
             with col_in3:
                 enrolled = st.number_input("Total Enrolled Students (Class Strength)", min_value=1, max_value=250, value=80)
                 practical_theory = st.selectbox("Practical / Theory", ["Theory", "Practical"])
                 test_week = st.selectbox("Internal Test Week?", [0, 1])
                 assignment = st.selectbox("Assignment Due?", [0, 1])
                 holiday_prox = st.selectbox("Holiday Proximity", ["None", "Holiday_Before", "Holiday_After"])
-                
+
             st.markdown("#### **Historical Lag Features (Previous Class Context)**")
+            st.caption(f"Defaults auto-filled from **{subject}** historical data ({_subj_hist_n} lectures recorded).")
             col_in4, col_in5 = st.columns(2)
             with col_in4:
-                prev_attendance = st.slider("Previous Lecture Attendance Percentage (%)", 0.0, 100.0, float(round(hist_mean_pct, 1)))
+                prev_attendance = st.slider(
+                    "Previous Lecture Attendance Percentage (%)",
+                    0.0, 100.0, _subj_hist_pct
+                )
                 gap_hours = st.number_input("Gap Since Previous Lecture (Hours)", min_value=0.0, max_value=168.0, value=24.0)
             with col_in5:
-                rolling_3 = st.slider("Rolling Average of Previous 3 Lectures (%)", 0.0, 100.0, float(round(hist_mean_pct, 1)))
-                subj_avg = st.slider("Subject Historical Average Attendance (%)", 0.0, 100.0, float(round(hist_mean_pct, 1)))
-                
+                rolling_3 = st.slider(
+                    "Rolling Average of Previous 3 Lectures (%)",
+                    0.0, 100.0, _subj_hist_pct
+                )
+                subj_avg = st.slider(
+                    "Subject Historical Average Attendance (%)",
+                    0.0, 100.0, _subj_hist_pct
+                )
+
             submit = st.form_submit_button("Generate Prediction Insights")
             
         if submit:
@@ -487,17 +564,19 @@ with tabs[1]:
                 pres_count = res.get("predicted_present")
                 pres_pct = res.get("predicted_percentage")
 
-                # --- Historical baseline is ALWAYS shown prominently ---
+                # --- Subject-specific historical baseline ---
+                _src = "real recorded lectures" if _subj_hist_n > 0 else "overall class average (no subject-specific data yet)"
                 st.markdown(f"""
                 <div class='glass-card'>
-                    <div class='card-title'>📊 Historical Average Baseline (Primary Reference)</div>
-                    <p>Based on all <b>18 verified lectures</b>, the class attends at an average of:</p>
+                    <div class='card-title'>📊 Historical Average Baseline — {subject}</div>
+                    <p>Based on <b>{_subj_hist_n if _subj_hist_n > 0 else 'N/A'} recorded lectures</b>
+                    for this subject ({_src}):</p>
                     <div style='font-size:2rem;font-weight:700;color:#fbbf24;'>
-                        38.75% &nbsp;|&nbsp; ~31 students present out of 80
+                        {_subj_hist_pct:.2f}% &nbsp;|&nbsp; ~{_subj_hist_present} students present out of {enrolled}
                     </div>
                     <p style='color:#8fa0b5;font-size:0.85rem;margin-top:8px;'>
-                        This is the operational fallback. Use this figure for scheduling decisions
-                        until a larger verified dataset is collected.
+                        This is the subject-specific operational baseline. Use this figure for
+                        scheduling decisions for <b>{subject}</b>.
                     </p>
                 </div>
                 """, unsafe_allow_html=True)
@@ -518,30 +597,32 @@ with tabs[1]:
                 else:
                     st.markdown("""
                     <div class='warning-card'>
-                        <b>⚠️ Regression model did not beat baseline — showing historical average only.</b>
+                        <b>⚠️ Regression model did not beat baseline — showing subject historical average only.</b>
                     </div>
                     """, unsafe_allow_html=True)
 
-                # --- Classification band: ALWAYS disabled when is_valid=False ---
+                # --- Classification band ---
                 st.markdown(f"""
                 <div class='warning-card'>
                     <b>🚫 Attendance Band: Not Available for Reliable Use</b><br>
                     The classification model tied the dummy baseline (accuracy=0.50 on 4 test rows).
-                    The <b>"High" band (&gt;75%) was never observed</b> in any of the 18 lectures
-                    (max was 75.0%). No automated Low/Medium/High recommendation will be generated.
+                    The <b>"High" band (&gt;75%) was never observed</b> in any of the {n_lectures}
+                    lectures. No automated Low/Medium/High recommendation will be generated.
                     {'<br>Historical most-frequent class for reference only: <b>' + most_frequent_class + '</b>' if not clf_is_valid else ''}
                 </div>
                 """, unsafe_allow_html=True)
 
-                # Risk flag based on historical mean
-                risk = "High Risk" if hist_mean_pct < 50.0 else "Normal"
+                # Risk flag based on subject-specific average
+                _risk_pct = _subj_hist_pct if _subj_hist_n > 0 else hist_mean_pct
+                risk = "High Risk" if _risk_pct < 50.0 else "Normal"
                 risk_color = "#f87171" if risk == "High Risk" else "#34d399"
                 st.markdown(f"""
                 <div class='glass-card'>
-                    <div class='metric-lbl'>Historical Risk Status</div>
+                    <div class='metric-lbl'>Historical Risk Status — {subject}</div>
                     <div class='metric-val' style='color:{risk_color};'>{risk}</div>
                     <p style='font-size:0.8rem;color:#8fa0b5;margin-top:5px;'>
-                        Based on historical mean attendance of 38.75% — below the 50% threshold.
+                        Based on subject historical average of {_subj_hist_pct:.1f}%
+                        {'(below' if _risk_pct < 50 else '(above'} the 50% attendance threshold).
                     </p>
                 </div>
                 """, unsafe_allow_html=True)
@@ -559,8 +640,23 @@ with tabs[2]:
         model_pkg = joblib.load(student_model_path)
         pipeline = model_pkg['pipeline']
         
-        # Load dataset
-        student_data_path = os.path.join(os.path.dirname(project_root), "data", "student_attendance_205_students.csv")
+        # Load dataset — search in several candidate locations
+        _candidate_paths = [
+            os.path.join(project_root, "data", "processed", "student_attendance_205_students.csv"),
+            os.path.join(project_root, "data", "student_attendance_205_students.csv"),
+            os.path.join(os.path.dirname(project_root), "data", "student_attendance_205_students.csv"),
+        ]
+        student_data_path = next((p for p in _candidate_paths if os.path.exists(p)), None)
+        if student_data_path is None:
+            st.markdown("""
+            <div class='warning-card'>
+                <h4>⚠️ Student Dataset Not Found</h4>
+                <p>The student attendance CSV file could not be located. Expected at
+                <code>data/processed/student_attendance_205_students.csv</code>.
+                Place the file there and refresh the page.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            st.stop()
         student_df = pd.read_csv(student_data_path)
         
         # Generate predictions
@@ -615,8 +711,12 @@ with tabs[2]:
             return 'background-color: rgba(255, 255, 255, 0.05); color: #8fa0b5; text-align: center;'
 
         # Clean display
-        styled_pivot = pivot_df.style.applymap(color_status_grid)
-        st.dataframe(styled_pivot, use_container_width=True, height=450)
+        # pandas >= 2.1 renamed applymap -> map on Styler objects
+        try:
+            styled_pivot = pivot_df.style.map(color_status_grid)
+        except AttributeError:
+            styled_pivot = pivot_df.style.applymap(color_status_grid)  # older pandas fallback
+        st.dataframe(styled_pivot, width='stretch', height=450)
         
         # Individual search
         st.markdown("---")
@@ -641,8 +741,12 @@ with tabs[2]:
             
         with col_s2:
             st.markdown(f"#### **Subject-wise Predictions for {search_id}**")
-            subj_pred_df = student_records[['Subject', 'Attendance_Period', 'Assignment_Score', 'Internal_Marks', 'Late_Count', 'Online_Class_Attendance', 'Predicted_Status']]
-            st.dataframe(subj_pred_df.style.applymap(color_status_grid), use_container_width=True)
+            _cols_wanted = [c for c in ['Subject', 'Attendance_Period', 'Assignment_Score', 'Internal_Marks', 'Late_Count', 'Online_Class_Attendance', 'Predicted_Status'] if c in student_records.columns]
+            subj_pred_df = student_records[_cols_wanted]
+            try:
+                st.dataframe(subj_pred_df.style.map(color_status_grid), width='stretch')
+            except AttributeError:
+                st.dataframe(subj_pred_df.style.applymap(color_status_grid), width='stretch')
             
     else:
         st.markdown("""

@@ -1,6 +1,6 @@
-Model,MAE,RMSE,MAPE (%),R2,Note
-Dummy Regressor (Mean Baseline),14.5,17.1092,49.2835,-0.1291,Naive baseline — predicts training mean for every observation
-Linear Regression,37.2796,42.4341,140.3533,-5.9456,Far worse than baseline — overfits on 14 training rows
-Decision Tree Regressor,22.2,23.6587,67.4598,-1.1591,Worse than baseline
-Random Forest Regressor,14.0192,15.1268,43.0452,0.1174,Marginally better than baseline on 4-row test — EXPLORATORY ONLY
-Gradient Boosting Regressor,22.4673,27.2761,53.3059,-1.8698,Worse than baseline
+Model,MAE,RMSE,MAPE (%),R2
+Dummy Regressor (Mean Baseline),16.4945,19.2494,56.848,-0.2442
+Linear Regression,14.0127,18.6003,58.0679,-0.1617
+Decision Tree Regressor,11.6471,16.2682,54.5551,0.1114
+Random Forest Regressor,10.0499,12.0697,46.8818,0.5109
+Gradient Boosting Regressor,8.0334,10.7368,43.0666,0.6129
